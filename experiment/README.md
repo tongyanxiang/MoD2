@@ -26,9 +26,9 @@ The **experiment artifact** is organized as follows:
     │   └── MoD2SWaT.py
     └── trace
         └── swat_network_attacks.xlsx
-        └── evalAttackTrace_tau_0.05.zip
-        └── evalNegativeTrace_tau_0.05.zip
-        └── evalPositiveTrace_tau_0.05.zip
+        └── evalAttackTrace_tau_0.05
+        └── evalNegativeTrace_tau_0.05
+        └── evalPositiveTrace_tau_0.05
 └── VideoEncoder
     ├── README.md
     ├── detector
