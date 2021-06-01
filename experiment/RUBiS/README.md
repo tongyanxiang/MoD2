@@ -25,7 +25,8 @@ For each test configuration, the execution trace records time steps, optimal con
 We provide two scripts to reproduce experimental reuslts of the effectiveness and usefulness.
 
 #### Effectiveness
-Go to subfoler *RUBiS/detector* and run *evaluateEffectiveness4RUBiS.py* in a terminal. The output looks like this:
+* Unzip RUBiSTraces.zip and move subfolders *evalNegativeTrace* and *evalPositiveTrace* to *RUBiS/trace*
+* Go to *RUBiS/detector* and run *evaluateEffectiveness4RUBiS.py* in a terminal. The output looks like this:
 ```
 ~~~~~ Evaluating effectiveness of MoD2 ~~~~~
 
@@ -38,10 +39,11 @@ False Positive Rate: 0.25%
 False Negative Rate: 0.0%
 Mean Time Delay: 0.0s
 ```
-The mean time delay turns out better than our preprint paper due to the addition of activeDetector which is mentioned in our approach and there exists only one false positive due to activeDetector. We will revise this in the carmera ready version.
+The mean time delay turns out better than our paper due to the addition of activeDetector which is mentioned in our approach and there exists only one false positive due to activeDetector. We will revise this in the carmera ready version.
 
 #### Usefulness
-Go to subfoler *RUBiS/detector* and run *evaluateUsefulness4RUBiS.py* in a terminal. The output looks like this:
+* Unzip RUBiSTraces.zip and move subfolders *evalNegativeTrace* and *evalPositiveTrace* to *RUBiS/trace*
+* Go to subfoler *RUBiS/detector* and run *evaluateUsefulness4RUBiS.py* in a terminal. The output looks like this:
 ```
 ~~~~~~ Evaluating usefulness of MoD2 ~~~~~
 
@@ -60,4 +62,4 @@ deviation time: 3173.4s
 abnormal time: 60.0s
 abnormal rate: 2.0%
 ```
-Also, the abnormla rate turns out better than our preprint paper due to the addition of activeDetector.
+Also, the abnormal rate turns out better than our paper due to the addition of activeDetector.
