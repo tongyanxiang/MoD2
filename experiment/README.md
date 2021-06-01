@@ -40,10 +40,9 @@ The **experiment artifact** is organized as follows:
         └── evalPositiveTrace (from VideoEncoderTraces.zip in the dataset)
   ```
   
-#### Each sub-floder named after the suject (e.g., RUBiS) includes: 
-
-* A README file that introduces how to reproduce expermental results
-* A sub-folder that contains the MoD2 and scripts for statistical analysis of MoD2's effectiveness and usefulness.
-* A sub-folder that contains execution traces under negative and positive (addition of attack for SWaT) test configuration without any adaptation-supervision mechanism.
+* Each sub-floder named after the suject (e.g., RUBiS) includes: 
+    * A README file that introduces how to reproduce expermental results
+    * A sub-folder that contains the MoD2 and scripts for statistical analysis of MoD2's effectiveness and usefulness.
+    * A sub-folder that contains execution traces under negative and positive (addition of attack for SWaT) test configuration without any adaptation-supervision mechanism.
 
 #### Go to each sub-floder to reproduce experimental results now !!!
