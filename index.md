@@ -8,7 +8,8 @@ title: "MoD2"
     * [Paper preprint (PDF)](artifact/MoD2-fse2021.pdf)
 * Research Artifact
     * [Subjects](https://github.com/tongyanxiang/MoD2/tree/main/subject): control-SASs with MoD2-based adaptation-supervision mechanism
-    * [Experiments](https://github.com/tongyanxiang/MoD2/tree/main/experiment): offline MoD2 with the collected execution traces and reproduction of experimental results
+    * [Experiments](https://github.com/tongyanxiang/MoD2/tree/main/experiment): offline MoD2 with the input of collected execution traces and reproduction of experimental results
+    * [Dataset](https://drive.google.com/drive/folders/1FO80jwV4m8lejJU3kHSdE7ESZkuRf2T1?usp=sharing): please first download the collected execution traces!
     
 ----
 
