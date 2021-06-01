@@ -32,7 +32,9 @@ For each test configuration, the execution trace records frame id, optimal contr
 We provide two scripts to reproduce experimental reuslts of the effectiveness and usefulness.
 
 #### Effectiveness
-Go to subfoler *VideoEncoder/detector* and run *evaluateEffectiveness4VideoEncoder.py* in a terminal. The output looks like this:
+ * Unzip VideoEncoderTraces.zip and move subfolders *evalNegativeTrace* and *evalPositiveTrace* to *VideoEncoder/trace*
+ * Go to *VideoEncoder/detector* and run *evaluateEffectiveness4VideoEncoder.py* in a terminal. The output looks like this:
+
 ```
 ~~~~~ Evaluating effectiveness of MoD2 ~~~~~
 
@@ -48,7 +50,9 @@ Mean Time Delay: 0.0s
 The mean time delay turns out better than our preprint paper due to the addition of activeDetector which is mentioned in our approach. We will revise this in the carmera ready version.
 
 #### Usefulness
-Go to subfoler *VideoEncoder/detector* and run *evaluateUsefulness4VideoEncoder.py* in a terminal. The output looks like this:
+ * Unzip VideoEncoderTraces.zip and move subfolders *evalNegativeTrace* and *evalPositiveTrace* to *VideoEncoder/trace*
+ * Go to *VideoEncoder/detector* and run *evaluateUsefulness4VideoEncoder.py* in a terminal. The output looks like this:
+
 ```
 ~~~~~~ Evaluating usefulness of MoD2 ~~~~~
 
