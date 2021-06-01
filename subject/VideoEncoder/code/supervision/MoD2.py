@@ -23,8 +23,8 @@ class MoD2:
         self.Q = 0.02955
 
         # Uncertainty compensation terms
-        self.gamma = 0.1718
-        self.W = 0.5096
+        self.gamma = 0.17184
+        self.W = 0.50961
         self.V = 1.0e-16
 
         # Safe region of model parameter value
