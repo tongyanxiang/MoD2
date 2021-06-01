@@ -9,17 +9,17 @@ SWaT is a fully operational scaled-down water treatment plant that produces doub
 
 ### Collected traces
 For each test configuration, the execution trace records measured water levels of five tanks and control signals to valves of six PLCs as follows:
-```
-812.38289008135,792.1686188980214,815.7506728733921,698.5948360985067,666.3035198207283
-0,0,0,0,0,0,0,0,0,0
-1,1,1,1,1,1,1,1,1,1
-0,0,0,0,0,0,0,0,0,0
-812.4341702885405,792.219353301958,815.7675154259271,698.5567618185817,666.2125898964978
-0,1,0,0,0,1,0,0,1,1
-1,0,1,1,1,0,1,1,0,0
-0,0,0,0,0,0,0,0,0,0
-...
-```
+  ```
+  812.38289008135,792.1686188980214,815.7506728733921,698.5948360985067,666.3035198207283
+  0,0,0,0,0,0,0,0,0,0
+  1,1,1,1,1,1,1,1,1,1
+  0,0,0,0,0,0,0,0,0,0
+  812.4341702885405,792.219353301958,815.7675154259271,698.5567618185817,666.2125898964978
+  0,1,0,0,0,1,0,0,1,1
+  1,0,1,1,1,0,1,1,0,0
+  0,0,0,0,0,0,0,0,0,0
+  ...
+  ```
 * We have collected 200 negaitive traces, 200 positive traces and 200 attack traces at the length of (1.0/0.05)*60*30 adaptation loops (0.05s for each loop)
 * The time interval of model deviation detection is 1.0s and the ouput of optimal controller is signals with 0 or 1. therefore, the traces will be preprocessed as `u_1` and `y` and then input to MoD2.
 
@@ -28,58 +28,56 @@ We provide three scripts to reproduce experimental reuslts of the effectiveness 
 
 #### Effectiveness with the input of negative and positive traces
 
-- Go to subfoler *SWaT/trace*, unzip the traces **evalNegativeTrace_tau_0.05.zip** and **evalPositiveTrace_tau_0.05.zip**.
+- Go to *SWaT/trace*, unzip trace files in sub-folder **evalNegativeTrace_tau_0.05** and **evalPositiveTrace_tau_0.05**.
+- Move them together in sub-folder **evalNegativeTrace_tau_0.05** and **evalPositiveTrace_tau_0.05**.
+- Go to *SWaT/detector* and run *evaluateEffectiveness4SWaT.py* in a terminal. The output looks like this:
+  ```
+  ~~~~~ Evaluating effectiveness of MoD2 ~~~~~
 
-- Go to subfoler *SWaT/detector* and run *evaluateEffectiveness4SWaT.py* in a terminal. The output looks like this:
+  load negative test configurations and apply MoD2...
 
-```
-~~~~~ Evaluating effectiveness of MoD2 ~~~~~
+  load positive test configurations and apply MoD2...
 
-load negative test configurations and apply MoD2...
-
-load positive test configurations and apply MoD2...
-
-*** statistical result ***
-False Positive Rate: 0.0%
-False Negative Rate: 0.0%
-Mean Time Delay: 39.23s
-```
+  *** statistical result ***
+  False Positive Rate: 0.0%
+  False Negative Rate: 0.0%
+  Mean Time Delay: 39.23s
+  ```
 
 #### Effectiveness with the input attack traces
-- Go to subfoler *SWaT/trace*, unzip the traces **evalAttackTrace_tau_0.05.zip**.
+- Go to *SWaT/trace*, unzip trace files in subfolder **evalAttackTrace_tau_0.05**.
+- Move them together in subfolder **evalAttackTrace_tau_0.05**.
+- Go to *SWaT/detector* and run *evaluateEffectiveness4SWaTAttack.py* in a terminal. The output looks like this:
+  ```
+  ~~~~~ Evaluating effectiveness of MoD2 ~~~~~
 
-- Go to subfoler *SWaT/detector* and run *evaluateEffectiveness4SWaTAttack.py* in a terminal. The output looks like this:
+  load attack test configurations and apply MoD2...
 
-```
-~~~~~ Evaluating effectiveness of MoD2 ~~~~~
-
-load attack test configurations and apply MoD2...
-
-*** statistical result ***
-False Positive Rate: 0.0%
-False Negative Rate: 0.0%
-Mean Time Delay: 10.2s
-```
+  *** statistical result ***
+  False Positive Rate: 0.0%
+  False Negative Rate: 0.0%
+  Mean Time Delay: 10.2s
+  ```
 
 #### Usefulness with the input attack traces
-- Go to subfoler *SWaT/trace*, unzip the traces **evalNegativeTrace_tau_0.05.zip**, **evalPositiveTrace_tau_0.05.zip** and **evalAttackTrace_tau_0.05.zip**.
+- Go to *SWaT/trace*, unzip trace files in subfolder **evalNegativeTrace_tau_0.05**, **evalPositiveTrace_tau_0.05** and **evalAttackTrace_tau_0.05**.
+- Move them together in the corresponding subfolders.
+- Go to *SWaT/detector* and run *evaluateUsefulness4SWaT.py* in a terminal. The output looks like this:
+  ```
+  ~~~~~~ Evaluating usefulness of MoD2 ~~~~~
 
-- Go to subfoler *SWaT/detector* and run *evaluateUsefulness4SWaT.py* in a terminal. The output looks like this:
-```
-~~~~~~ Evaluating usefulness of MoD2 ~~~~~
+  processing...
 
-processing...
-
-*** original control-SAS ***
-deviation time: 1081.31s
-abnormal time: 162.45s
-abnormal rate: 14.0%
+  *** original control-SAS ***
+  deviation time: 1081.31s
+  abnormal time: 162.45s
+  abnormal rate: 14.0%
 
 
-processing...
+  processing...
 
-*** MoD2-based adaptation-supervision mechanism ***
-deviation time: 1081.31s
-abnormal time: 0.0s
-abnormal rate: 0.0%
-```
+  *** MoD2-based adaptation-supervision mechanism ***
+  deviation time: 1081.31s
+  abnormal time: 0.0s
+  abnormal rate: 0.0%
+  ```
