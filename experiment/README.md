@@ -14,8 +14,8 @@ The **experiment artifact** is organized as follows:
     │   └── evaluateUsefulness4RUBiS.py
     │   └── MoD2RUBiS.py
     └── trace
-        └── evalNegativeTrace
-        └── evalPositiveTrace
+        └── evalNegativeTrace (from RUBiSTraces.zip in the dataset)
+        └── evalPositiveTrace (from RUBiSTraces.zip in the dataset)
         └── realworld workload
 └── SWaT
     ├── README.md
@@ -26,9 +26,9 @@ The **experiment artifact** is organized as follows:
     │   └── MoD2SWaT.py
     └── trace
         └── swat_network_attacks.xlsx
-        └── evalAttackTrace_tau_0.05
-        └── evalNegativeTrace_tau_0.05
-        └── evalPositiveTrace_tau_0.05
+        └── evalAttackTrace_tau_0.05 (from SWaTTraces.zip in the dataset)
+        └── evalNegativeTrace_tau_0.05 (from SWaTTraces.zip in the dataset)
+        └── evalPositiveTrace_tau_0.05 (from SWaTTraces.zip in the dataset)
 └── VideoEncoder
     ├── README.md
     ├── detector
@@ -36,8 +36,8 @@ The **experiment artifact** is organized as follows:
     │   └── evaluateUsefulness4VideoEncoder.py
     │   └── MoD2VideoEncoder.py
     └── trace
-        └── evalNegativeTrace
-        └── evalPositiveTrace
+        └── evalNegativeTrace (from VideoEncoderTraces.zip in the dataset)
+        └── evalPositiveTrace (from VideoEncoderTraces.zip in the dataset)
   ```
   
 #### Each sub-floder named after the suject (e.g., RUBiS) includes: 
