@@ -3,15 +3,16 @@
 For each subject, we instantiate a MoD2 following the provided MoD2 template and implement MoD2-based adaptation-supervision mechanism with the designed mandatory controller and switcher.
 
 The **subject artifact** is organized as follows:
+
 ```
 .
 ├── MoD2Template.py
 └── RUBiS
-    ├── README.md
-    └── queueinglib.zip
+    ├── README.md
+    └── queueinglib.zip
     └── swim.zip
 └── SWaT
-    ├── README.md
+    ├── README.md
     ├── controlblock
     │   └── controlblock.py
     ├── device
@@ -34,9 +35,9 @@ The **subject artifact** is organized as follows:
     ├── supervision
     │   └── MoD2.py  
     │   └── switcher.py
-    ├── IO.py
-    ├── SCADA.py  
-    └── swat.py   
+    ├── IO.py
+    ├── SCADA.py  
+    └── swat.py   
 └── VideoEncoder
     ├── README.md
     └── code
@@ -52,11 +53,10 @@ The **subject artifact** is organized as follows:
         └── positive
   ```
   
-#### MoD2Template.py gives the [framework](https://tongyanxiang.github.io/MoD2/) of implenenting model-guided model devaition detector.
-  
-#### Apart from functional code, each suject (e.g., RUBiS) should contains:
-* A README file that introduces the implementation and running of MoD2-based adaptation-supervision mechanism.
-* A sub-folder named **supervision** that contains the MoD2, mandatory controller (SWaT implements it in plant.py) and switcher.
+* MoD2Template.py gives the [framework](https://tongyanxiang.github.io/MoD2/) of implenenting model-guided model devaition detector.  
+* Apart from functional code, each suject (e.g., RUBiS) should contains:
+  * A README file that introduces the implementation and running of MoD2-based adaptation-supervision mechanism.
+  * A sub-folder named **supervision** that contains the MoD2, mandatory controller (SWaT implements it in plant.py) and switcher.
    
-#### Go to each sub-floder to learn more about MoD2-based adaptation-supervision mechanism now !!!
+#### Go to each subfloder to learn more about MoD2-based adaptation-supervision mechanism now !!!
   
