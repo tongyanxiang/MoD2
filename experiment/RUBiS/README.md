@@ -19,47 +19,47 @@ For each test configuration, the execution trace records time steps, optimal con
 22,1,22.3167,0.246975
 ...
 ```
-* We have collected 200 negaitive traces and 200 positive traces at the length of 90 adaptation loops
+We have collected 200 negative traces and 200 positive traces at the length of 90 adaptation loops
 
 ### Reproduction of experimental results
 We provide two scripts to reproduce experimental reuslts of the effectiveness and usefulness.
 
-#### Effectiveness
-* Unzip RUBiSTraces.zip and move subfolders *evalNegativeTrace* and *evalPositiveTrace* to *RUBiS/trace*
-* Go to *RUBiS/detector* and run *evaluateEffectiveness4RUBiS.py* in a terminal. The output looks like this:
-```
-~~~~~ Evaluating effectiveness of MoD2 ~~~~~
+* **Effectiveness**
+  * Unzip RUBiSTraces.zip and move subfolders *evalNegativeTrace* and *evalPositiveTrace* to *RUBiS/trace*
+  * Go to *RUBiS/detector* and run *evaluateEffectiveness4RUBiS.py* in a terminal. The output looks like this:
+    ```
+    ~~~~~ Evaluating effectiveness of MoD2 ~~~~~
 
-load test configurations...
+    load test configurations...
 
-apply MoD2...
+    apply MoD2...
 
-*** statistical result ***
-False Positive Rate: 0.25%
-False Negative Rate: 0.0%
-Mean Time Delay: 0.0s
-```
-The mean time delay turns out better than our paper due to the addition of activeDetector which is mentioned in our approach and there exists only one false positive due to activeDetector. We will revise this in the carmera ready version.
+    *** statistical result ***
+    False Positive Rate: 0.25%
+    False Negative Rate: 0.0%
+    Mean Time Delay: 0.0s
+    ```
+    The mean time delay turns out better due to the addition of activeDetector which is mentioned in our paper and there exists only one false positive trace due to activeDetector. We will revise this in the camera ready version.
 
-#### Usefulness
-* Unzip RUBiSTraces.zip and move subfolders *evalNegativeTrace* and *evalPositiveTrace* to *RUBiS/trace*
-* Go to subfoler *RUBiS/detector* and run *evaluateUsefulness4RUBiS.py* in a terminal. The output looks like this:
-```
-~~~~~~ Evaluating usefulness of MoD2 ~~~~~
+* **Usefulness**
+  * Unzip RUBiSTraces.zip and move subfolders *evalNegativeTrace* and *evalPositiveTrace* to *RUBiS/trace*
+  * Go to subfoler *RUBiS/detector* and run *evaluateUsefulness4RUBiS.py* in a terminal. The output looks like this:
+    ```
+    ~~~~~~ Evaluating usefulness of MoD2 ~~~~~
 
-processing...
+    processing...
 
-*** original control-SAS ***
-deviation time: 3173.4s
-abnormal time: 1953.0s
-abnormal rate: 61.1%
+    *** original control-SAS ***
+    deviation time: 3173.4s
+    abnormal time: 1953.0s
+    abnormal rate: 61.1%
 
 
-processing...
+    processing...
 
-*** MoD2-based adaptation-supervision mechanism ***
-deviation time: 3173.4s
-abnormal time: 60.0s
-abnormal rate: 2.0%
-```
-Also, the abnormal rate turns out better than our paper due to the addition of activeDetector.
+    *** MoD2-based adaptation-supervision mechanism ***
+    deviation time: 3173.4s
+    abnormal time: 60.0s
+    abnormal rate: 2.0%
+    ```
+    Also, the abnormal rate turns out better due to the addition of activeDetector.
