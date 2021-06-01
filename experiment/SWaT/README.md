@@ -26,57 +26,52 @@ For each test configuration, the execution trace records measured water levels o
 ### Reproduction of experimental results
 We provide three scripts to reproduce experimental reuslts of the effectiveness and usefulness.
 
-#### Effectiveness with the input of negative and positive traces
+* **Effectiveness with the input of negative and positive traces**
   * Unzip SWaTTraces.zip and move subfolders *evalNegativeTrace_tau_0.05* and *evalPositiveTrace_tau_0.05* to *SWaT/trace*
   * Go to *SWaT/detector* and run *evaluateEffectiveness4SWaT.py* in a terminal. The output looks like this:
+    ```
+    ~~~~~ Evaluating effectiveness of MoD2 ~~~~~
 
-  ```
-  ~~~~~ Evaluating effectiveness of MoD2 ~~~~~
+    load negative test configurations and apply MoD2...
 
-  load negative test configurations and apply MoD2...
+    load positive test configurations and apply MoD2...
 
-  load positive test configurations and apply MoD2...
+    *** statistical result ***
+    False Positive Rate: 0.0%
+    False Negative Rate: 0.0%
+    Mean Time Delay: 39.23s
+    ```
+* **Effectiveness with the input attack traces**
+  * Unzip SWaTTraces.zip and move subfolder *evalAttackTrace_tau_0.05* to *SWaT/trace*
+  * Go to *SWaT/detector* and run *evaluateEffectiveness4SWaTAttack.py* in a terminal. The output looks like this:
+    ```
+    ~~~~~ Evaluating effectiveness of MoD2 ~~~~~
 
-  *** statistical result ***
-  False Positive Rate: 0.0%
-  False Negative Rate: 0.0%
-  Mean Time Delay: 39.23s
-  ```
+    load attack test configurations and apply MoD2...
 
-#### Effectiveness with the input attack traces
-* Unzip SWaTTraces.zip and move subfolder *evalAttackTrace_tau_0.05* to *SWaT/trace*
-* Go to *SWaT/detector* and run *evaluateEffectiveness4SWaTAttack.py* in a terminal. The output looks like this:
+    *** statistical result ***
+    False Positive Rate: 0.0%
+    False Negative Rate: 0.0%
+    Mean Time Delay: 10.2s
+    ```
+* **Usefulness with the input attack traces**
+  * Unzip SWaTTraces.zip and move subfolder *evalAttackTrace_tau_0.05* to *RUBiS/trace*
+  * Go to *SWaT/detector* and run *evaluateUsefulness4SWaT.py* in a terminal. The output looks like this:
+    ```
+    ~~~~~~ Evaluating usefulness of MoD2 ~~~~~
 
-  ```
-  ~~~~~ Evaluating effectiveness of MoD2 ~~~~~
+    processing...
 
-  load attack test configurations and apply MoD2...
-
-  *** statistical result ***
-  False Positive Rate: 0.0%
-  False Negative Rate: 0.0%
-  Mean Time Delay: 10.2s
-  ```
-
-#### Usefulness with the input attack traces
-* Unzip SWaTTraces.zip and move subfolder *evalAttackTrace_tau_0.05* to *RUBiS/trace*
-* Go to *SWaT/detector* and run *evaluateUsefulness4SWaT.py* in a terminal. The output looks like this:
-
-  ```
-  ~~~~~~ Evaluating usefulness of MoD2 ~~~~~
-
-  processing...
-
-  *** original control-SAS ***
-  deviation time: 1081.31s
-  abnormal time: 162.45s
-  abnormal rate: 14.0%
+    *** original control-SAS ***
+    deviation time: 1081.31s
+    abnormal time: 162.45s
+    abnormal rate: 14.0%
 
 
-  processing...
+    processing...
 
-  *** MoD2-based adaptation-supervision mechanism ***
-  deviation time: 1081.31s
-  abnormal time: 0.0s
-  abnormal rate: 0.0%
-  ```
+    *** MoD2-based adaptation-supervision mechanism ***
+    deviation time: 1081.31s
+    abnormal time: 0.0s
+    abnormal rate: 0.0%
+    ```
