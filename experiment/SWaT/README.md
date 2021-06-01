@@ -27,10 +27,9 @@ For each test configuration, the execution trace records measured water levels o
 We provide three scripts to reproduce experimental reuslts of the effectiveness and usefulness.
 
 #### Effectiveness with the input of negative and positive traces
+  * Unzip SWaTTraces.zip and move subfolders *evalNegativeTrace_tau_0.05* and *evalPositiveTrace_tau_0.05* to *SWaT/trace*
+  * Go to *SWaT/detector* and run *evaluateEffectiveness4SWaT.py* in a terminal. The output looks like this:
 
-- Go to *SWaT/trace*, unzip trace files in sub-folder **evalNegativeTrace_tau_0.05** and **evalPositiveTrace_tau_0.05**.
-- Move them together in sub-folder **evalNegativeTrace_tau_0.05** and **evalPositiveTrace_tau_0.05**.
-- Go to *SWaT/detector* and run *evaluateEffectiveness4SWaT.py* in a terminal. The output looks like this:
   ```
   ~~~~~ Evaluating effectiveness of MoD2 ~~~~~
 
@@ -45,9 +44,9 @@ We provide three scripts to reproduce experimental reuslts of the effectiveness 
   ```
 
 #### Effectiveness with the input attack traces
-- Go to *SWaT/trace*, unzip trace files in subfolder **evalAttackTrace_tau_0.05**.
-- Move them together in subfolder **evalAttackTrace_tau_0.05**.
-- Go to *SWaT/detector* and run *evaluateEffectiveness4SWaTAttack.py* in a terminal. The output looks like this:
+* Unzip SWaTTraces.zip and move subfolder *evalAttackTrace_tau_0.05* to *SWaT/trace*
+* Go to *SWaT/detector* and run *evaluateEffectiveness4SWaTAttack.py* in a terminal. The output looks like this:
+
   ```
   ~~~~~ Evaluating effectiveness of MoD2 ~~~~~
 
@@ -60,9 +59,9 @@ We provide three scripts to reproduce experimental reuslts of the effectiveness 
   ```
 
 #### Usefulness with the input attack traces
-- Go to *SWaT/trace*, unzip trace files in subfolder **evalNegativeTrace_tau_0.05**, **evalPositiveTrace_tau_0.05** and **evalAttackTrace_tau_0.05**.
-- Move them together in the corresponding subfolders.
-- Go to *SWaT/detector* and run *evaluateUsefulness4SWaT.py* in a terminal. The output looks like this:
+* Unzip SWaTTraces.zip and move subfolder *evalAttackTrace_tau_0.05* to *RUBiS/trace*
+* Go to *SWaT/detector* and run *evaluateUsefulness4SWaT.py* in a terminal. The output looks like this:
+
   ```
   ~~~~~~ Evaluating usefulness of MoD2 ~~~~~
 
