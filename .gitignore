@@ -141,5 +141,13 @@ cython_debug/
 *.iml
 *.xml
 
-# subfolder
-subjects/SWaT/result/swatRes.txt
+# ignore dataset
+experiment/RUBiS/trace/*
+experiment/SWaT/trace/*
+experiment/VideoEncoder/trace/*
+
+# ignore temp results
+subject/SWaT/result/*
+subject/VideoEncoder/compressed/*
+subject/VideoEncoder/code/result/*
+
