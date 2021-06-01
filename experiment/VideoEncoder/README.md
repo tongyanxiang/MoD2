@@ -31,43 +31,40 @@ For each test configuration, the execution trace records frame id, optimal contr
 ### Reproduction of experimental results
 We provide two scripts to reproduce experimental reuslts of the effectiveness and usefulness.
 
-#### Effectiveness
- * Unzip VideoEncoderTraces.zip and move subfolders *evalNegativeTrace* and *evalPositiveTrace* to *VideoEncoder/trace*
- * Go to *VideoEncoder/detector* and run *evaluateEffectiveness4VideoEncoder.py* in a terminal. The output looks like this:
+* **Effectiveness**
+  * Unzip VideoEncoderTraces.zip and move subfolders *evalNegativeTrace* and *evalPositiveTrace* to *VideoEncoder/trace*
+  * Go to *VideoEncoder/detector* and run *evaluateEffectiveness4VideoEncoder.py* in a terminal. The output looks like this:
+    ```
+    ~~~~~ Evaluating effectiveness of MoD2 ~~~~~
 
-```
-~~~~~ Evaluating effectiveness of MoD2 ~~~~~
+    load test configurations...
 
-load test configurations...
+    apply MoD2...
 
-apply MoD2...
+    *** statistical result ***
+    False Positice Rate: 3.0%
+    False Negative Rate: 2.0%
+    Mean Time Delay: 0.0s
+    ```
+   The mean time delay turns out better than our preprint paper due to the addition of activeDetector which is mentioned in our approach. We will revise this in the carmera ready version.
+* **Usefulness**
+  * Unzip VideoEncoderTraces.zip and move subfolders *evalNegativeTrace* and *evalPositiveTrace* to *VideoEncoder/trace*
+  * Go to *VideoEncoder/detector* and run *evaluateUsefulness4VideoEncoder.py* in a terminal. The output looks like this:
+    ```
+    ~~~~~~ Evaluating usefulness of MoD2 ~~~~~
 
-*** statistical result ***
-False Positice Rate: 3.0%
-False Negative Rate: 2.0%
-Mean Time Delay: 0.0s
-```
-The mean time delay turns out better than our preprint paper due to the addition of activeDetector which is mentioned in our approach. We will revise this in the carmera ready version.
+    processing...
 
-#### Usefulness
- * Unzip VideoEncoderTraces.zip and move subfolders *evalNegativeTrace* and *evalPositiveTrace* to *VideoEncoder/trace*
- * Go to *VideoEncoder/detector* and run *evaluateUsefulness4VideoEncoder.py* in a terminal. The output looks like this:
-
-```
-~~~~~~ Evaluating usefulness of MoD2 ~~~~~
-
-processing...
-
-*** original control-SAS ***
-deviation time: 18.18s
-abnormal time: 2.92s
-abnormal rate: 16.2%
+    *** original control-SAS ***
+    deviation time: 18.18s
+    abnormal time: 2.92s
+    abnormal rate: 16.2%
 
 
-processing...
+    processing...
 
-*** MoD2-based adaptation-supervision mechanism ***
-deviation time: 18.18s
-abnormal time: 0.08s
-abnormal rate: 0.4%
-```
+    *** MoD2-based adaptation-supervision mechanism ***
+    deviation time: 18.18s
+    abnormal time: 0.08s
+    abnormal rate: 0.4%
+    ```
