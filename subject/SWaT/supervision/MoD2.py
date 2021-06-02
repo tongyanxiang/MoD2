@@ -33,9 +33,9 @@ class MoD2:
 
         self.W = np.zeros((3,3))
 
-        self.V = np.array([[0.00080, 0.0, 0.0],
+        self.V = np.array([[0.00079, 0.0, 0.0],
                            [0.0, 0.00080, 0.0],
-                           [0.0, 0.0, 0.00080]])
+                           [0.0, 0.0, 0.00079]])
 
         # Safe region of model parameter values
         self.percent = [[0.35, 0.35], [0.35, 0.35],
