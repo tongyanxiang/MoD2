@@ -95,17 +95,6 @@ frame, quality_{k-1}, originalSize_k, compressedSize_k, B_k, BVar, alarm
 ```
 
 ### Requirements
+ - Unbuntu 18.04 
  - Python 3.7
  - ImageMagick
- - Unbuntu 18.04 (code/encoder.py)
-	```Python
-	def convert(path_in, path_out, quality):
-	  command = "convert -quality " + str(quality) + " "
-	  ...
-	```
-  - Or Windows 10 (code/encoder.py)
-	```Python
-	def convert(path_in, path_out, quality):
-	  command = "magick convert -quality " + str(quality) + " "
-	  ...
-	```
