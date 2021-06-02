@@ -56,7 +56,7 @@ The **subject artifact** is organized as follows:
 * MoD2Template.py gives the [framework](https://tongyanxiang.github.io/MoD2/) of implenenting model-guided model devaition detector.  
 * Apart from functional code, each suject (e.g., RUBiS) should contains:
   * A README file that introduces the implementation and running of MoD2-based adaptation-supervision mechanism.
-  * A sub-folder named **supervision** that contains the MoD2, mandatory controller (SWaT implements it in plant.py) and switcher.
+  * A subfolder named **supervision** that contains the MoD2, mandatory controller (SWaT implements it in plant.py) and switcher.
    
 #### Go to each subfloder to learn more about MoD2-based adaptation-supervision mechanism now !!!
   
