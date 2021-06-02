@@ -42,7 +42,7 @@ load positive test configurations and apply MoD2...
 *** statistical result ***
 False Positive Rate: 0.0%
 False Negative Rate: 0.0%
-Mean Time Delay: 39.23s
+Mean Time Delay: 40.11s
 ```
 
 #### Effectiveness with the input attack traces
@@ -58,7 +58,7 @@ load attack test configurations and apply MoD2...
 *** statistical result ***
 False Positive Rate: 0.0%
 False Negative Rate: 0.0%
-Mean Time Delay: 10.15s
+Mean Time Delay: 11.15s
 ```
 
 #### Usefulness with the input attack traces

@@ -76,15 +76,15 @@ for time in range(0, maxstep):
     Sec_P = not bool(time%int(1.0/tau))
     Min_P = not bool(time%(int(1.0/tau)*60))
 
-    # Solving out plant odes in 0.05s
+    # solving out plant odes in 0.05s
     Plant.Actuator(IO_P1,IO_P2,IO_P3,IO_P4,IO_P5,IO_P6,HMI,switcher)
     Plant.Plant(IO_P1,IO_P2,IO_P3,IO_P4,IO_P5,IO_P6,HMI)
 
-    # Measured water levels
+    # measured water levels
     if switcher.getSwithMode()==0 and time%intervalNum==0:
         list_YS.append([HMI.LIT101.Pv,HMI.LIT301.Pv,HMI.LIT401.Pv])
 
-    # Supervision
+    # supervision
     if switcher.getSwithMode() == 0:
         if int(time/intervalNum)>=1 and time%intervalNum==0:
 

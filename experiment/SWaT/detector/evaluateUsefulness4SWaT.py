@@ -97,17 +97,17 @@ def evaluateMoD2AbnormalRate():
         alarmIndex = -1
         alarmFlag = 0
 
-        for n in range(0, maxstep-1):
+        for n in range(1, maxstep):
 
             U_101 = np.zeros(2)
             U_301 = np.zeros(2)
             U_401 = np.zeros(2)
             YS = np.zeros(3)
 
-            # calculate U loop
+            # calculate U(k-1) loop
             for i in range(0, intervalNum):
                 # MV101,MV201,MV301,MV302,MV303,MV304,MV501,MV502,MV503,MV504
-                mvRes = evalAttackTraceLines[lineNum*intervalNum*n+lineNum*i+2].strip().split(",")
+                mvRes = evalAttackTraceLines[lineNum*intervalNum*(n-1)+lineNum*i+2].strip().split(",")
                 MV101 = int(mvRes[0])
                 MV201 = int(mvRes[1])
                 MV301 = int(mvRes[2])
@@ -120,7 +120,7 @@ def evaluateMoD2AbnormalRate():
                 MV504 = int(mvRes[9])
 
                 # P101,P102,P301,P302,P401,P402,P501,P502,P601,P602
-                pumpRes = evalAttackTraceLines[lineNum*intervalNum*n+lineNum*i+4].strip().split(",")
+                pumpRes = evalAttackTraceLines[lineNum*intervalNum*(n-1)+lineNum*i+4].strip().split(",")
                 P101 = int(pumpRes[0])
                 P102 = int(pumpRes[1])
                 P301 = int(pumpRes[2])
@@ -152,8 +152,8 @@ def evaluateMoD2AbnormalRate():
                     U_401[1] = round(U_401[1] + tau, 3)
 
             # YS101(k),YS301(k),YS401(k)
-            yRes_old = evalAttackTraceLines[lineNum*intervalNum*n+1].strip().split(",")
-            yRes = evalAttackTraceLines[lineNum*intervalNum*(n+1)+1].strip().split(",")
+            yRes_old = evalAttackTraceLines[lineNum*intervalNum*(n-1)+1].strip().split(",")
+            yRes = evalAttackTraceLines[lineNum*intervalNum*n+1].strip().split(",")
             for i in range(0, 3):
                 YS[i] = float(yRes[i]) - float(yRes_old[i])
 
