@@ -118,7 +118,7 @@ void SimpleMonitor::handleMessage(cMessage *msg) {
     ```
     
 ### Requirements:
-   - Unbuntu 18.04
-   - Python 3.6
-   - OMNeT++ 5.5.1
-   - Boost 1.65.1
+* Unbuntu 18.04
+* Python 3.7
+* OMNeT++ 5.5.1
+* Boost 1.65.1
