@@ -25,8 +25,12 @@ We have collected 200 negative traces and 200 positive traces at the length of 9
 We provide two scripts to reproduce experimental reuslts of the effectiveness and usefulness.
 
 * **Effectiveness**
-  * Unzip RUBiSTraces.zip and move subfolders *evalNegativeTrace* and *evalPositiveTrace* to *RUBiS/trace*
-  * Go to *RUBiS/detector* and run *evaluateEffectiveness4RUBiS.py* in a terminal. The output looks like this:
+  * Unzip RUBiSTraces.zip and move subfolders *evalNegativeTrace* and *evalPositiveTrace* to *RUBiS/trace*.
+  * Go to *RUBiS/detector* and run *evaluateEffectiveness4RUBiS.py* in a terminal. 
+    ```
+    python3 evaluateEffectiveness4RUBiS.py
+    ```
+  * The output looks like this:
     ```
     ~~~~~ Evaluating effectiveness of MoD2 ~~~~~
 
@@ -43,7 +47,11 @@ We provide two scripts to reproduce experimental reuslts of the effectiveness an
 
 * **Usefulness**
   * Unzip RUBiSTraces.zip and move subfolders *evalNegativeTrace* and *evalPositiveTrace* to *RUBiS/trace*
-  * Go to subfoler *RUBiS/detector* and run *evaluateUsefulness4RUBiS.py* in a terminal. The output looks like this:
+  * Go to subfoler *RUBiS/detector* and run *evaluateUsefulness4RUBiS.py* in a terminal. 
+    ```
+    python3 evaluateUsefulness4RUBiS.py
+    ```
+  * The output looks like this:
     ```
     ~~~~~~ Evaluating usefulness of MoD2 ~~~~~
 
@@ -63,3 +71,8 @@ We provide two scripts to reproduce experimental reuslts of the effectiveness an
     abnormal rate: 2.0%
     ```
     Also, the abnormal rate turns out better due to the addition of activeDetector.
+    
+### Requirements
+* Unbutu 18.04
+* Python 3.7 (with numpy, scipy)
+
