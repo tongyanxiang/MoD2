@@ -20,7 +20,6 @@ We extend a [SWaT simulator](https://sav.sutd.edu.sg/research/physical-attestati
 ### Main control loop and model deviaton detection
 
 The main control loop is implemented in **swat.py** as follows:
-
 ```Python
 ...
 ...
@@ -57,7 +56,6 @@ for time in range(0, maxstep):
     PLC6.Pre_Main_Product(IO_P6,HMI)
 ...
 ...
-
 ```
 * For each 50ms, water levels of five tanks will be measured and the optimal controllers will be activated.
 * The adaptation-supervision mechanism is implemented by inserting model deviation detection before activating the controllers.
@@ -106,5 +104,5 @@ Ending simulation: no alarm
 ```
 
 ### Requirements
-  - Unbutu 18.04/Windows 10
-  - Python 3.7 (with scipy, numpy)
+* Unbutu 18.04
+* Python 3.7 (with numpy, scipy)
