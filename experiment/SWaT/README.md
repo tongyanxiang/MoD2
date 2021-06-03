@@ -20,7 +20,7 @@ For each test configuration, the execution trace records measured water levels o
 0,0,0,0,0,0,0,0,0,0
 ...
 ```
-* We have collected 200 negaitive traces, 200 positive traces and 200 attack traces at the length of (1.0/0.05)*60*30 adaptation loops (0.05s for each loop)
+* We have collected 200 negaitive traces, 200 positive traces and 200 attack traces at the length of (1.0/0.05)\*60\*30 adaptation loops (0.05s for each loop)
 * The time interval of model deviation detection is 1.0s and the ouput of optimal controller is signals with 0 or 1. therefore, the traces will be preprocessed as `u_1` and `y` and then input to MoD2.
 
 ### Reproduction of experimental results
