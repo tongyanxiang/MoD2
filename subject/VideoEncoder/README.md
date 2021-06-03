@@ -95,6 +95,5 @@ frame, quality_{k-1}, originalSize_k, compressedSize_k, B_k, BVar, alarm
 ```
 
 ### Requirements
- - Unbuntu 18.04 
- - Python 3.7
- - ImageMagick
+* Unbutu 18.04
+* Python 3.7 (with numpy, scipy)
