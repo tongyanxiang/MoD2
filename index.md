@@ -54,7 +54,7 @@ The `safeRegion` is the necessary condition under which the controller’s behav
 
 **Probability threshold**
 
-The `probThreshold` is the probability over which an alarm is given. Its value is determined by users, generally set to 0.9973 (*three-sigma rule*) or 0.999999998 (*six-sigma rule*).
+The `probThreshold` is the probability below which an alarm is given. Its value is determined by users, generally set to 0.9973 (*three-sigma rule*) or 0.999999998 (*six-sigma rule*).
 
 ### observer
 
