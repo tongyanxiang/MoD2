@@ -51,16 +51,35 @@ void SimpleMonitor::handleMessage(cMessage *msg) {
 * The *MoD2* module performs model deviation detection and activates the *Switcher* module for updating the switching parameter `triggerMandatoryCtrl`.
 * The *Switcher* module activates *OptimalController* module or *MandatoryController* module based on the value of `triggerMandatoryCtrl`.
 
+### Installation
+* Download OMNeT++ 5.5.1 and install it following the installation guide 
+* Make sure that OMNeT++ bin directory is in the PATH, otherwise add it:
+   ```
+   export PATH=$PATH:/home/tong/omnetpp-5.5.1/bin
+   ```
+* Install boost
+   ```
+   sudo apt-get install libboost-all-dev
+   ```
+* Unzip the files **queueinglib.zip** and **swim.zip** in *RUBiS* directory
+* Go to *RUBiS* and compile queueinglib
+   ```
+   cd queueinglib
+   make
+   ```
+* Go to *RUBiS* and compile swim
+   ```
+   cd swim
+   make  
+   ```
+   
 ### Running RUBiS
-
-  - Unzip the files **queueinglib.zip** and **swim.zip** in *RUBiS* directory
-
-  - Run the simulation
-      ```
-     cd RUBiS/swim/simulations
-     ./runexp.sh
-      ```
-    and the terminal output looks like this：
+* Run the simulation
+    ```
+    cd RUBiS/swim/simulations
+    ./runexp.sh
+    ```
+* The terminal output looks like this：
     ```
     OMNeT++ Discrete Event Simulation  (C) 1992-2019 Andras Varga, OpenSim Ltd.
     Version: 5.5.1, build: 190613-08ba16f914, edition: Academic Public License -- NOT FOR COMMERCIAL USE
