@@ -123,7 +123,7 @@ For each adaptation loop, the estimator predicts current model parameter value b
 
 ### passiveDetector
 
-Given the controller’s safe region (i.e, `safeRegion`) and probability threshold (i.e, `probThreshold`), the passiveDetector calculates the probability that estimated model parameter value falls within safe region by a cumulative distribution function (i.e, the CDF of normal distribution). An alarm will be given when the derived `probability` exceeds `probThreshold`.
+Given the controller’s safe region (i.e, `safeRegion`) and probability threshold (i.e, `probThreshold`), the passiveDetector calculates the probability that estimated model parameter value falls within safe region by a cumulative distribution function (i.e, the CDF of normal distribution). An alarm will be given when the derived `probability` does not exceed `probThreshold`.
 ```python
 def passiveDetector(self, B_k, P_k):
 
@@ -147,7 +147,7 @@ def passiveDetector(self, B_k, P_k):
 
 ### activeDetector
 
-The activeDetector gives an alarm if the `probability` of occurring  `delta` value (e.g., residual) of measured system's output is less than a small probability threshold (e.g., `1.0-prob6sigma`).
+The activeDetector gives an alarm if the `probability` of occurring  `delta` value (e.g., residual) of measured system's output does not exceed a small probability threshold (e.g., `1.0-prob6sigma`).
 
 ```python
 def activeDetector(self, delta):
