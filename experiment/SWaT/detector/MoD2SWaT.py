@@ -166,7 +166,7 @@ class MoD2SWaT:
     def passiveDetector(self, B_k, P_k):
 
         # Alarm if the derived probability that model parameter value
-        # falls into safe region exceeds the probability threshold
+        # falls into safe region does not exceed the probability threshold
 
         cdf = np.zeros(6)
 
@@ -208,7 +208,7 @@ class MoD2SWaT:
     def activeDetector(self, delta):
 
         # Alarm if derived probability of occuring delta value of
-        # the managed system's ouput is less tha probability threshold
+        # the managed system's ouput does not exceed the probability threshold
 
         loc = 0.0
         scale = np.sqrt(self.V[0][0])

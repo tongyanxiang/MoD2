@@ -139,7 +139,7 @@ class MoD2VideoEncoder:
     def passiveDetector(self, B_k, P_k):
 
         # Alarm if the derived probability that model parameter value
-        # falls into safe region exceeds the probability threshold
+        # falls into safe region does not exceed the probability threshold
 
         loc = B_k
         scale = np.sqrt(P_k)
@@ -154,7 +154,7 @@ class MoD2VideoEncoder:
     def activeDetector(self, delta):
 
         # Alarm if derived probability of occuring delta value of
-        # the managed system's ouput is less tha probability threshold
+        # the managed system's ouput does not exceed the probability threshold
 
         loc = 0.0
         scale = 4.2078
