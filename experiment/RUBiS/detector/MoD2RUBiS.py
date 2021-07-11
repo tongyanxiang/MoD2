@@ -30,9 +30,9 @@ class MoD2RUBiS:
 
         # Uncertainty compensation terms
         self.gamma = np.array([[0.0],
-                               [0.02930]])
+                               [-0.38551]])
         self.W = np.array([[0.0, 0.0],
-                           [0.0, 0.006891]])
+                           [0.0, 1.19312]])
         self.V = np.array([[2.0e-06]])
 
         # Safe region of model parameter value

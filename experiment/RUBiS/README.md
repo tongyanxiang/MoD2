@@ -41,7 +41,7 @@ We provide two scripts to reproduce experimental reuslts of the effectiveness an
     *** statistical result ***
     False Positive Rate: 0.25%
     False Negative Rate: 0.0%
-    Mean Time Delay: 0.0s
+    Mean Time Delay: 0.3s
     ```
     The mean time delay turns out better due to the addition of activeDetector which is mentioned in our paper and there exists only one false positive trace due to activeDetector. We will revise this in the camera ready version.
 
@@ -67,7 +67,7 @@ We provide two scripts to reproduce experimental reuslts of the effectiveness an
 
     *** MoD2-based adaptation-supervision mechanism ***
     deviation time: 3173.4s
-    abnormal time: 60.0s
+    abnormal time: 60.30s
     abnormal rate: 2.0%
     ```
     Also, the abnormal rate turns out better due to the addition of activeDetector.
