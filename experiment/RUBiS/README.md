@@ -71,8 +71,4 @@ We provide two scripts to reproduce experimental reuslts of the effectiveness an
     abnormal rate: 2.0%
     ```
     Also, the abnormal rate turns out better due to the addition of activeDetector.
-    
-### Requirements
-* Unbutu 18.04
-* Python 3.7 (with numpy, scipy)
 
