@@ -102,7 +102,3 @@ Now starting simulation
 
 Ending simulation: no alarm
 ```
-
-### Requirements
-* Unbutu 18.04
-* Python 3.7 (with numpy, scipy)
