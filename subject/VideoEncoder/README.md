@@ -93,7 +93,3 @@ frame, quality_{k-1}, originalSize_k, compressedSize_k, B_k, BVar, alarm
 4629, 58, 1234.7392578125, 194.7763671875, 3.0959, 0.5, 0
 ...
 ```
-
-### Requirements
-* Unbutu 18.04
-* Python 3.7 (with numpy, scipy)
