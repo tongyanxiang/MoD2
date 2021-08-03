@@ -26,7 +26,7 @@ Homage: [https://tongyanxiang.github.io/MoD2/](https://tongyanxiang.github.io/Mo
    ```
    .
    ├── experiment: offline MoD2
-       ├── README.md: overall structure
+       ├── README.md: artifact structure of experiments
        └── SWaT
             ├── README.md: execution instructions
             └── ...
@@ -37,7 +37,7 @@ Homage: [https://tongyanxiang.github.io/MoD2/](https://tongyanxiang.github.io/Mo
             ├── README.md: execution instructions
             └── ...
    └── subject: MoD2-based adaptation-supervision mechanism
-       ├── README.md: overall structure
+       ├── README.md: artifact structure of subjects' mechanisms
        └── SWaT
             ├── README.md: execution instructions
             └── ...
