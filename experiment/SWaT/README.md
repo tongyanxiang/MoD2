@@ -89,8 +89,3 @@ We provide three scripts to reproduce experimental reuslts of the effectiveness 
     abnormal time: 0.0s
     abnormal rate: 0.0%
     ```
-
-### Requirements
-* Unbutu 18.04
-* Python 3.7 (with numpy, scipy)
-
