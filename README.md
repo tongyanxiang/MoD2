@@ -25,8 +25,7 @@ Homage: [https://tongyanxiang.github.io/MoD2/](https://tongyanxiang.github.io/Mo
    * Go to the subfloder to execute each implementation, the instructions of each implementation are shown in subfloder's README file. The **artifact** is organized as follows:
    ```
    .
-   ├── MoD2Template.py
-   └── experiment: offline MoD2
+   ├── experiment: offline MoD2
        ├── README.md: overall structure
        └── SWaT
             ├── README.md: execution instructions
