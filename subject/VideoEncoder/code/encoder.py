@@ -128,6 +128,7 @@ def encoder():
     resultFile.close()
 
 def convert(path_in, path_out, quality):
+    # command = "magick convert -quality " + str(quality) + " "
     command = "convert -quality " + str(quality) + " "
     command += path_in + ' ' + path_out
     os.system(command)
