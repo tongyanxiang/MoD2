@@ -12,3 +12,40 @@ Homage: [https://tongyanxiang.github.io/MoD2/](https://tongyanxiang.github.io/Mo
     * [Dataset](https://drive.google.com/drive/folders/1FO80jwV4m8lejJU3kHSdE7ESZkuRf2T1?usp=sharing): please first download the collected execution traces! 
     * [VirtualBox image](https://drive.google.com/drive/folders/1FO80jwV4m8lejJU3kHSdE7ESZkuRf2T1?usp=sharing): a MoD2 image *MoD2-artifacts-20210604.ova* (about 5G and may take significant time to download) with research artifacts and all requirements is also provided. 
 
+* Installation and execution
+
+   * Required environment
+      * Unbutu 18.04
+      * Python 3.7 (with numpy, scipy)
+      * OMNeT++ 5.5.1 and Boost 1.65.1 (for RUBiS)
+      * imagemagick (for video encoder)
+      
+   * Download the repository and its required [dataset](https://drive.google.com/drive/folders/1FO80jwV4m8lejJU3kHSdE7ESZkuRf2T1?usp=sharing)
+   
+   * Go to the subfloder to execute each implementation, the instructions of each implementation are shown in subfloder's README file. The **artifact** is organized as follows:
+   ```
+   .
+   ├── MoD2Template.py
+   └── experiment: offline MoD2
+       ├── README.md: overall structure
+       └── SWaT
+            ├── README.md: execution instructions
+            └── ...
+       └── RUBiS
+            ├── README.md: execution instructions
+            └── ...
+       └── VideoEncoder
+            ├── README.md: execution instructions
+            └── ...
+   └── subject: MoD2-based adaptation-supervision mechanism
+       ├── README.md: overall structure
+       └── SWaT
+            ├── README.md: execution instructions
+            └── ...
+       └── RUBiS
+            ├── README.md: execution instructions
+            └── ...
+       └── VideoEncoder
+            ├── README.md: execution instructions
+            └── ...
+     ```
