@@ -10,9 +10,9 @@ We extend a [SWaT simulator](https://sav.sutd.edu.sg/research/physical-attestati
 * The SCADA.py file instantiates the input output classes for communication between PLC and HMI.
 * The plc/ directory contains 6 PLC classes files (**optimal controllers**).
 * The HMI/HMI.py implements HMI classes to support SCADA.py.
-* The controlblocks/logicblock.py implements PLC subfunction classes to support building the PLC classes.
+* The controlblocks/controlblock.py implements PLC subfunction classes to support building the PLC classes.
 * The io_plc/IO_PLC.py implements classes to support IO.py.
-* The logicblock/controlblock.py implements useful functions like Timers and Alarms used in PLC class.
+* The logicblock/logicblock.py implements useful functions like Timers and Alarms used in PLC class.
 * The plant/plant.py implements the plant model and designed **mandatory controller**.
 * The supervision/ directory contains **MoD2** and **switcher**.
 * The result/swatRes.txt records the measurements (i.e, `U_{k-1}` and `Y_k`), model parameter value estimate (i.e, `B_k`, `BVar`), and the alarm signal (i.e, `alarm`) for each adaptation loop.
