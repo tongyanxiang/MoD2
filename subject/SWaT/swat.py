@@ -27,7 +27,7 @@ intervalNum = int(d/tau)
 print("d: {}s, intervalNum: {}\n".format(d, intervalNum))
 
 print("Initializing Plant\n")
-init = [812.4143,792.1847,815.7524,698.5924,666.2787]
+init = [498.5885,827.4722,875.6601,351.1663,273.3779]
 print("init: {}\n".format(init))
 
 Plant = plant(tau, init, 1)
@@ -77,7 +77,7 @@ for time in range(0, maxstep):
     Min_P = not bool(time%(int(1.0/tau)*60))
 
     # solving out plant odes in 0.05s
-    Plant.Actuator(IO_P1,IO_P2,IO_P3,IO_P4,IO_P5,IO_P6,switcher)
+    Plant.Actuator(IO_P1,IO_P2,IO_P3,IO_P4,IO_P5,IO_P6,switcher.getSwithMode())
     Plant.Plant(IO_P1,IO_P2,IO_P3,IO_P4,IO_P5,IO_P6,HMI)
 
     # measured water levels
@@ -172,3 +172,4 @@ resultFile.close()
 
 if alarmTime==-1:
     print("Ending simulation: no alarm\n")
+ 
